@@ -1,0 +1,8 @@
+LIBRARY        PMCAPDLL
+
+DESCRIPTION    'PM Capture Support DLL (C) Michal Necasek, 2001'
+PROTMODE
+
+EXPORTS
+    INITDLL
+    CLOSEDLL

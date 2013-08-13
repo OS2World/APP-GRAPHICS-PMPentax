@@ -1,0 +1,11 @@
+#define DLG_ABOUT     300
+#define ID_RESOURCE   100
+#define IDM_EDIT      10
+#define IDM_COPY      11
+#define IDM_PASTE     12
+#define IDM_CAPTURE   20
+#define IDM_DISPLAY   30
+#define IDM_ACTUAL    31
+#define IDM_STRETCH   32
+#define IDM_SNAP      200
+#define IDM_ABOUT     201

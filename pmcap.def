@@ -1,0 +1,8 @@
+NAME           PMCAP         WINDOWAPI
+
+DESCRIPTION    'PM Screen Capture Program (C) Michal Necasek, 2001'
+PROTMODE
+HEAPSIZE       1024
+STACKSIZE      8192
+
+;EXPORTS        ClientWndProc

@@ -1,0 +1,22 @@
+#------------------
+# CAPTURE make file
+#------------------
+
+pmcapdll.obj : pmcapdll.c pmcapdll.h
+     cl -c -Asnu -G2s -W3 -Zl pmcapdll.c
+
+pmcapdll.lib : pmcapdll.def
+     implib pmcapdll.lib pmcapdll.def
+
+pmcapdll.dll : pmcapdll.obj pmcapdll.def
+     link /align:16 pmcapdll, pmcapdll.dll, NUL, os2, pmcapdll
+
+pmcap.obj : pmcap.c pmcap.h pmcapdll.h
+     cl -c -Asnu -G2s -W3 pmcap.c
+
+pmcap.res : pmcap.rc pmcap.dlg pmcap.h
+     rc -r pmcap.rc
+
+pmcap.exe : pmcap.obj pmcap.def pmcap.res pmcapdll.lib
+     link pmcap, /align:16, NUL, os2 pmcapdll, pmcap
+     rc pmcap.res
